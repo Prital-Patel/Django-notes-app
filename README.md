@@ -1,12 +1,20 @@
 # Simple Notes App
-This is a simple notes app built with React and Django.
+# Jenkins Declrative CI/CD Pipeline
+
+This is a simple notes app built with React and Django. It is Deploy on AWS(EC2). 
 
 ## Requirements
+**Development**
 1. Python 3.9
 2. Node.js
 3. React
+**Deployment**
+1. Docker
+2. DockerHub
+3. AWS
+4. Jenkins
 
-## Installation
+##  Declarative Pipeline
 1. Clone the repository
 ```
 git clone https://github.com/LondheShubham153/django-notes-app.git
@@ -17,14 +25,12 @@ git clone https://github.com/LondheShubham153/django-notes-app.git
 docker build -t notes-app .
 ```
 
-3. Run the app
+3. Push to DockerHub with credentials
 ```
-docker run -d -p 8000:8000 notes-app:latest
+docker push ${env.dockerHubUser}/my-note-app:latest"
 ```
 
-## Nginx
-
-Install Nginx reverse proxy to make this application available
-
-`sudo apt-get update`
-`sudo apt install nginx`
+4. Deploy on EC2
+```
+docker-compose down && docker-compose up -d
+```
