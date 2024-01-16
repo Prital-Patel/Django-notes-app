@@ -8,6 +8,7 @@ This is a simple notes app built with React and Django. It is Deploy on AWS(EC2)
 1. Python 3.9
 2. Node.js
 3. React
+   
 **Deployment**
 1. Docker
 2. DockerHub
