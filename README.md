@@ -14,6 +14,7 @@ This is a simple notes app built with React and Django. It is Deploy on AWS(EC2)
 2. DockerHub
 3. AWS
 4. Jenkins
+5. Docker-compose
 
 ##  Declarative Pipeline
 1. Clone the repository
